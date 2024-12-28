@@ -1,0 +1,42 @@
+﻿@model List<MyElearning.DataAccess.Entities.Instructor>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Eğitmen Listesi
+                <br/>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Görsel</th>
+                        <th>Eğitmen Adı Soyadı</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                        <th>Kurslar</th>
+                        <th>Sitede Gör</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.InstructorId</td>
+                            <td><img src="@item.ImageUrl" style="height:80px;width:80px; border-radius:50%"/></td>
+                            <td>@item.Name @item.Surname</td>
+                            <td><a href="/Instructor/DeleteInstructor/@item.InstructorId" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Instructor/UpdateInstructor/@item.InstructorId" class="btn btn-outline-success">Güncelle</a></td>
+                            <td><a href="/Instructor/#/@item.InstructorId" class="btn btn-outline-warning">Kurslar</a></td>
+                            <td><a href="/Instructor/#/@item.InstructorId" class="btn btn-outline-secondary">Sitede Gör</a></td>
+
+                        </tr>
+                    }
+                </table>
+                <td><a href="/Instructor/AddInstructor/" class="btn btn-outline-primary">Yeni Eğitmen Ekle</a></td>
+            </div>
+        </div>
+    </div>
+</div>
+

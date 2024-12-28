@@ -1,0 +1,22 @@
+﻿@model MyElearning.DataAccess.Entities.Testimonial
+@{
+    ViewBag.Title = "AddTestimonial";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<h3>Yeni Referans Kaydı</h3>
+<form method="post">
+    <br /><br />
+    <label>Referans Adı Soyadı</label>
+    <input type="text" name="NameSurname" class="form-control" />
+    <br /><br />
+    <label>Referans Yorumu</label>
+    <input type="text" name="Comment" class="form-control" />
+    <br /><br />
+    <label>Rferans Görseli</label>
+    <input type="text" name="ImageUrl" class="form-control" />
+    <br /><br />
+    <button class="btn btn-primary">Referansı Kaydet</button>
+
+</form>
+

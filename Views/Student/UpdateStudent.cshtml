@@ -1,0 +1,27 @@
+﻿@model MyElearning.DataAccess.Entities.Student
+@{
+    ViewBag.Title = "UpdateStudent";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+
+<h3>Öğrenci Güncelleme Sayfası</h3>
+<form method="post">
+    <br /><br />
+    <input type="hidden" name="StudentId" value="@Model.StudentId" />
+    <label>Öğrenci Adı</label>
+    <input type="text" name="Name" value="@Model.Name" class="form-control" required />
+    <br /><br />
+    <label>Öğrenci Soyadı</label>
+    <input type="text" name="Surname" value="@Model.Surname" class="form-control" required />
+    <br /><br />
+    <label>Email</label>
+    <input type="email" name="Email" @Model.Email class="form-control" required />
+    <br /><br />
+    <label>Password</label>
+    <input type="password" name="Password" @Model.Password class="form-control" required />
+    <br /><br />
+
+    <button class="btn btn-primary">Öğrenciyi Güncelle</button>
+
+</form>

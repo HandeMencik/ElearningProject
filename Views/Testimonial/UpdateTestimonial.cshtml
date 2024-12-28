@@ -1,0 +1,23 @@
+﻿@model MyElearning.DataAccess.Entities.Testimonial
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<h3>Referans Bilgilerini Güncelle</h3>
+<form method="post">
+    <br /><br />
+    <input type="hidden" name="TestimonialId" value="@Model.TestimonialId" />
+    <label>Refrans Adı Soaydı</label>
+    <input type="text" name="NameSurname" value="@Model.NameSurname" class="form-control" />
+    <br /><br />
+    <label>Referans Yorumu</label>
+    <input type="text" name="Comment" value="@Model.Comment" class="form-control" />
+    <br /><br />
+    <label>Referans Görseli</label>
+    <input type="text" name="ImageUrl" value="@Model.ImageUrl" class="form-control" />
+    <br /><br />
+    <button class="btn btn-primary">Referansı Güncelle</button>
+
+</form>
+

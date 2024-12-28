@@ -1,0 +1,26 @@
+﻿@model MyElearning.DataAccess.Entities.Student
+@{
+    ViewBag.Title = "AddStudent";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<h3>Yeni Öğrenci Kaydı</h3>
+<form method="post">
+    <br /><br />
+    <label>Öğrenci Adı</label>
+    <input type="text" name="Name" class="form-control" required />
+    <br /><br />
+    <label>Öğrenci Soyadı</label>
+    <input type="text" name="Surname" class="form-control" required />
+    <br /><br />
+    <label>Email</label>
+    <input type="email" name="Email" class="form-control" required/>
+    <br /><br />
+    <label>Password</label>
+    <input type="password" name="Password" class="form-control" required/>
+    <br /><br />
+
+    <button class="btn btn-primary">Öğrenciyi Kaydet</button>
+
+</form>
+

@@ -1,0 +1,40 @@
+﻿@model List<MyElearning.DataAccess.Entities.Course>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Kurs Listesi
+                <br/>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Kurs Adı</th>
+                        <th>Kategori</th>
+                        <th>Eğitmen</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CourseId</td>
+                            <td>@item.Title</td>
+                            <td>@item.category.CategoryName</td>
+                            <td>@item.ınstructor.Name @item.ınstructor.Surname</td>
+                            <td><a href="/Course/DeleteCourse/@item.CourseId" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Course/UpdateCourse/@item.CourseId" class="btn btn-outline-success">Güncelle</a></td>
+
+                        </tr>
+                    }
+                </table>
+                <td><a href="/Course/AddCourse/" class="btn btn-outline-primary">Yeni Kurs Ekle</a></td>
+            </div>
+        </div>
+    </div>
+</div>
+
