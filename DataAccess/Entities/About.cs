@@ -11,8 +11,6 @@ namespace MyElearning.DataAccess.Entities
         public int AboutId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        [Column("Date")]
-        public DateTime FoundedDate { get; set; }
 
     }
 }
