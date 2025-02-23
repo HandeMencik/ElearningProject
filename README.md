@@ -1,4 +1,5 @@
 **ElearningProject 🎓📚**
+
 Merhaba! Bu proje, .NET Core tabanlı bir e-öğrenme platformudur. Öğrencilerin ve eğitmenlerin etkileşimli bir öğrenme ortamında buluşmasını, ders içeriklerini görüntülemesini ve değerlendirmeleri yönetmesini amaçlar.
 
 **Kullanılan Teknolojiler 🔧**
